@@ -1,0 +1,131 @@
+$darkBlue: #052252;
+$paleBlue: #374E75;
+$lightBlue: #9AE1F0;
+
+@mixin flexCenter($direction,$wrap){
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-icons,.material-icons-outlined,.material-icons-round {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+
+body{
+    background:#f7f7f7;
+}
+.no-margin{
+    margin: 0;
+}
+.card-title{
+    font-size: 22px;
+    font-weight: 600;
+    color: $darkBlue;
+    width: 100%;
+}
+.mdl-button{
+    text-transform: none;
+    @include flexCenter(row,nowrap);
+    border: 2px solid $darkBlue;
+    width: max-content;
+    border-radius: 30px;
+    color: $darkBlue !important;
+    font-weight: 600;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+}
+.demo-card-square.mdl-card {
+    width: 90%;
+    margin: 10px auto;
+    height: max-content;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+.left-side{
+    display: flex;
+
+}
+
+.flexRow{
+    flex-direction: row;
+}
+.rowReverse{
+    flex-direction: row-reverse;
+}
+.page-sections{
+    width: 100%;
+    @include flexCenter(row,wrap);
+    
+}
+.card-picture{
+    width: 400px;
+    height: 300px;
+    flex-grow: 1;
+    img{
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.card-text{
+    p{
+        margin: 12px 0;
+    }
+    .icon{
+        margin-right: 8px;
+    }
+}
+.right-side{
+    max-width: 390px;
+}
+
+
+// for large devices 
+@media screen and (min-width:1000px) {
+    .card-picture {
+        height: 400px;
+    }
+}
+
+
+@media screen and (max-width:1250px) {
+    .rowReverse{
+        flex-direction: row;
+    }
+}
+// for small devices 
+@media screen and (max-width:500px) {
+    .card-picture {
+        width: 100%;
+        height: 230px;
+    }
+}
