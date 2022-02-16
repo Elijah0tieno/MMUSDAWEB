@@ -35,7 +35,9 @@ $lightBlue: #9AE1F0;
     font-feature-settings: 'liga';
   }
 
-
+// *{
+//     font-family: 'Noto Sans', sans-serif;
+// }
 body{
     background:#f7f7f7;
 }
@@ -115,7 +117,42 @@ body{
         height: 400px;
     }
 }
-
+.event-section{
+    justify-content: space-evenly;
+}
+.event-card{
+    margin: 10px;
+    width:280px;
+    .poster-img{
+        width: 100%;
+        height: auto;
+        max-height: 190px;
+        object-fit: cover;
+    }
+    .mdl-card__title {
+        padding: 8px 16px 0;
+    }
+    .mdl-card__title-text {
+        color: $darkBlue;
+        font-weight: 600;
+    }
+    .mdl-card__supporting-text {
+        padding: 8px 16px;
+        width: 100%;
+        padding-top: 4px;
+        p{
+            padding: 0 0 12px;
+            font-size: 15px;
+            font-weight: 600;
+            color: $darkBlue;
+            @include flexCenter(row,wrap);
+            justify-content: flex-start;
+        }
+    }
+    a{
+        margin: auto;
+    }
+}
 
 @media screen and (max-width:1250px) {
     .rowReverse{
