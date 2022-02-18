@@ -1,4 +1,7 @@
 from django.db import models
+from django.core.files.storage import FileSystemStorage
+
+fs = FileSystemStorage(location='/media/photos')
 
 # Create your models here.
 class Department(models.Model):
@@ -10,6 +13,16 @@ class Department(models.Model):
     def __str__(self):
         return self.name
 
+class CalendaOfEvents(models.Model):
+    event_name = models.CharField(max_length=250)
+    poster = models.ImageField(storage=fs)
+    week = models.CharField(max_length=200)
+    description = models.CharField(max_length=500)
+    
+    def __str__(self):
+        return self.event_name
+    
+    
 class Family(models.Model):
     name = models.CharField(max_length=250)
     history = models.CharField(max_length=250)
@@ -33,3 +46,4 @@ class Member(models.Model):
     
     def __str__(self):
         return self.name
+    
