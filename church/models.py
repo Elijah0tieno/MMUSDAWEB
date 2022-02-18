@@ -13,7 +13,7 @@ class Department(models.Model):
     def __str__(self):
         return self.name
 
-class CalendaOfEvents(models.Model):
+class Event(models.Model):
     event_name = models.CharField(max_length=250)
     poster = models.ImageField(storage=fs)
     week = models.CharField(max_length=200)
