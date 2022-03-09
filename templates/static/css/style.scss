@@ -35,9 +35,9 @@ $lightBlue: #9AE1F0;
     font-feature-settings: 'liga';
   }
 
-// *{
-//     font-family: 'Noto Sans', sans-serif;
-// }
+*{
+    font-family: 'Noto Sans', sans-serif;
+}
 body{
     background:#f7f7f7;
 }
@@ -66,11 +66,11 @@ body{
 }
 .demo-card-square.mdl-card {
     width: 90%;
-    margin: 10px auto;
+    margin: 1rem auto;
     height: max-content;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 .left-side{
     display: flex;

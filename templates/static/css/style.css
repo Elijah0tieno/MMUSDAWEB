@@ -22,6 +22,10 @@
           font-feature-settings: 'liga';
 }
 
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
+
 body {
   background: #f7f7f7;
 }
@@ -71,7 +75,7 @@ body {
 
 .demo-card-square.mdl-card {
   width: 90%;
-  margin: 10px auto;
+  margin: 1rem auto;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -80,7 +84,7 @@ body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .left-side {
