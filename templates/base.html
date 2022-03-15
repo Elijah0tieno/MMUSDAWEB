@@ -1,4 +1,5 @@
 {% load static %}
+{% load thumbnail %}
 <!DOCTYPE html>
 <html class="u-theme--ming svg picture csspositionsticky srcset inlinesvg no-touchevents cssanimations backgroundcliptext flexbox flexboxlegacy no-flexboxtweener flexwrap scrollsnappoints backgroundblendmode objectfit object-fit js no-touch js-priorityNav" lang="&quot;en-US&quot;">
 <head>
@@ -342,14 +343,18 @@ John 3:16 &quot;For God so loved the world that he gave his only begotten son th
             <h2 class="mdl-card__title-text card-title u-padding--double--bottom">MMUSDA Calendar of Events</h2>
 
             <div class="mdl-card event-card mdl-shadow--4dp">
+                {% for event_item in events %}
                 <div class="mdl-card__media">
-                    <img src="{% static 'images/family-week-poster.jpeg' %}" alt="event poster" class="poster-img">
+                    {% comment %} <img src="{% static 'images/family-week-poster.jpeg' %}" alt="event poster" class="poster-img"> {% endcomment %}
+                    {% thumbnail event_item.poster "480x360" crop="center" as im %}
+                    <img src="{{ im.url }}"  alt=""></img>
+                    {% endthumbnail %}
                 </div>
+                
                 <div class="mdl-card__title"> 
                     <div class="mdl-card__title-text">
                     Family week
                     </div>
-                     
                  </div>
                 <div class="mdl-card__supporting-text">
                     <p class="mdl-card__supporting-text event-date">
@@ -366,33 +371,7 @@ John 3:16 &quot;For God so loved the world that he gave his only begotten son th
                          Learn More
                        </a>
                 </div>
-              </div>
-
-              <div class="mdl-card event-card mdl-shadow--4dp">
-                <div class="mdl-card__media">
-                    <img src="{% static 'images/family-week-poster.jpeg' %}" alt="event poster" class="poster-img">
-                </div>
-                <div class="mdl-card__title"> 
-                    <div class="mdl-card__title-text">
-                    Family week
-                    </div>
-                     
-                 </div>
-                <div class="mdl-card__supporting-text">
-                    <p class="mdl-card__supporting-text event-date">
-                        <span class="material-icons-outlined">
-                            event
-                            </span>
-                        13th - 19th, February 2022
-                    </p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, recusandae praesentium eligendi, laudantium nobis vero, cumque rem 
-                </div>
-                <div class="mdl-card__actions">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                        <img src="{% static 'icons/More.svg' %}" alt="more" class="icon">
-                         Learn More
-                       </a>
-                </div>
+                {% endfor %}
               </div>
 
               <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">

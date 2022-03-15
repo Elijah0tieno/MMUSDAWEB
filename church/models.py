@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.files.storage import FileSystemStorage
-
-fs = FileSystemStorage(location='/media/photos')
+from sorl.thumbnail import ImageField
+# fs = FileSystemStorage(location='/media/photos')
 
 # Create your models here.
 class Department(models.Model):
@@ -15,7 +15,7 @@ class Department(models.Model):
 
 class Event(models.Model):
     event_name = models.CharField(max_length=250)
-    poster = models.ImageField(storage=fs)
+    poster = ImageField()
     week = models.CharField(max_length=200)
     description = models.CharField(max_length=500)
     
