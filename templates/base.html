@@ -341,9 +341,9 @@ John 3:16 &quot;For God so loved the world that he gave his only begotten son th
         
         <section class="page-sections event-section u-padding">
             <h2 class="mdl-card__title-text card-title u-padding--double--bottom">MMUSDA Calendar of Events</h2>
-
+             
+            {% for event_item in events %}
             <div class="mdl-card event-card mdl-shadow--4dp">
-                {% for event_item in events %}
                 <div class="mdl-card__media">
                     {% comment %} <img src="{% static 'images/family-week-poster.jpeg' %}" alt="event poster" class="poster-img"> {% endcomment %}
                     {% thumbnail event_item.poster "480x360" crop="center" as im %}
@@ -353,7 +353,7 @@ John 3:16 &quot;For God so loved the world that he gave his only begotten son th
                 
                 <div class="mdl-card__title"> 
                     <div class="mdl-card__title-text">
-                    Family week
+                    {{ event_item.event_name }}
                     </div>
                  </div>
                 <div class="mdl-card__supporting-text">
@@ -361,9 +361,9 @@ John 3:16 &quot;For God so loved the world that he gave his only begotten son th
                         <span class="material-icons-outlined">
                             event
                             </span>
-                        13th - 19th, February 2022
+                        {{ event_item.week}}
                     </p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, recusandae praesentium eligendi, laudantium nobis vero, cumque rem 
+                {{ event_item.description }}
                 </div>
                 <div class="mdl-card__actions">
                     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
@@ -371,8 +371,8 @@ John 3:16 &quot;For God so loved the world that he gave his only begotten son th
                          Learn More
                        </a>
                 </div>
-                {% endfor %}
               </div>
+              {% endfor %}
 
               <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 View All Events
