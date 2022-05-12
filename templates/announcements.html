@@ -244,56 +244,44 @@
             
     <main class="l-main u-spacing--double u-padding--double--bottom" role="main">
 
+        
         <section class="page-sections event-section u-padding">
-            <h2 class="mdl-card__title-text card-title iconCentre u-padding--double--bottom"> Families 
-                <span class="material-symbols-outlined fam-icon">
-                    group
-                </span>
-                <!-- <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_igwwdlec.json"  background="transparent"  speed="0.4"  style="width: 30px; height: 30px;"  loop  autoplay></lottie-player> -->
-           </h2>
-
-           <section class="fam-holder">
-            {% for family_item in families %}
-                  <!-- family card start-->
-                <div class="demo-card-square mdl-card mdl-shadow--4dp flexRow fam-card">
-                    <div class="mdl-card--expand left-side">
-                        <picture class="card-picture">
-                            <source srcset="https://iwillgo2020.org/wp-content/uploads/2020/07/Leadership-1.jpg" media="(min-width: 900px)">
-                            <source srcset="https://iwillgo2020.org/wp-content/uploads/2020/07/Leadership-1.jpg" media="(min-width: 700px)">
-                            <source srcset="https://iwillgo2020.org/wp-content/uploads/2020/07/Leadership-1.jpg" media="(min-width: 500px)">
-                            <img itemprop="image" srcset="https://iwillgo2020.org/wp-content/uploads/2020/07/Leadership-1.jpg" alt="Alt Text">
-                        </picture>
+            <h2 class="mdl-card__title-text card-title u-padding--double--bottom"> Announcements
+                 <!-- <span class="material-symbols-outlined noti-icon">
+                notifications_active
+                </span> -->
+                <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_ggnpo3y5.json"  background="transparent"  speed="0.7"  style="width: 30px; height: 30px;"  loop autoplay></lottie-player>
+            </h2>
+            <!-- <h5 class="sem-title">Weekly announcements</h5> -->
+    
+            <section class="ann-holder">
+                {% for announcement_item in announcements %}
+                <!-- beginning of one card  -->
+                <div class="mdl-card ann-card mdl-shadow--2dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                    <h2 class="mdl-card__title-text">{{ announcement_item.item }}</h2>
                     </div>
-                    <div class="right-side flexColumn">
-                        <div class="mdl-card__supporting-text card-text">
-                         <h2 class="mdl-card__title-text card-title">{{ family_item.name }}</h2>
-
-                         <p class="parent"><b>Dad: {{ family_item.dad }}</b>
-                         </p>
-                         <p class="parent"><b>Mom: {{ family_item.mum }} </b>
-
-                         </p>
-                           <p class="">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Aenan convallis.
-                           </p>
-                           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                            <span class="material-symbols-outlined phone-icon">
-                                phone_in_talk
-                                </span>
-                            Contact family
-                          </a>
-                        </div>
-
-                        
+                    <div class="mdl-card__supporting-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenan convallis.
                     </div>
-                  </div>
-                  {% endfor %}
-                  <!-- family card end-->
+
+                    <div class="mdl-card__supporting-text date-posted">
+                        <span class="material-symbols-outlined date-icon">
+                            schedule
+                            </span>
+                            {{ announcement_item.date }}
+                    </div>
+                </div>
+                <!-- ending of card  -->
+                {% endfor %}
 
 
-            </section>     
+
+            </section>
         </section>
+
+
         
         
 </main>
@@ -388,6 +376,6 @@
     
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="static/js/script.min.js" type="text/javascript"></script>
-
+    <script src="../static/js/events.js"></script>
 </body>
 </html>
