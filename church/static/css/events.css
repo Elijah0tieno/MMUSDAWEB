@@ -387,4 +387,21 @@
       max-width: unset !important;
     }
   }
+  @media screen and (max-width: 330px) {
+    .eventPage-card{
+      max-width: 100%;
+    }
+    .eventPage-card .event-box {
+    min-width:unset;
+    }
+    .eventPage-card .event-box h5 {
+      font-size: 14px;
+    }
+    .eventPage-card .event-box p {
+      font-size: 12px;
+  }
+  .card-title{
+    max-width: 100%;
+  }
+  }
   /*# sourceMappingURL=events.css.map */
