@@ -40,7 +40,7 @@ class Announcement(models.Model):
         return self.item
     
 class Member(models.Model):
-    family = models.ForeignKey(Family, on_delete=models.RESTRICT)
+    family = models.ForeignKey(Family, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
     contact = models.CharField(max_length=10)
     
