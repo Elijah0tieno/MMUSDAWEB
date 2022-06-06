@@ -13,24 +13,26 @@
 }
 
 .fam-holder .fam-card {
-  width: 375px;
-  max-width: 100%;
-  margin: 10px;
+  width: 300px;
+  margin: 20px 10px;
+  padding: 0 0 12px 12px;
+  min-height: 150px;
 }
 
 .fam-holder .fam-card .card-title {
   width: 100%;
   text-align: left;
   font-size: 18px;
+  align-self: end;
 }
 
 .left-side {
-  padding-left: 6px;
-  padding-top: 6px;
+  padding-left: 0;
 }
 
 .card-icon {
   width: 60px;
+  display: none;
 }
 
 .right-side {
@@ -44,7 +46,13 @@
   width: -moz-max-content;
   width: max-content;
   max-width: 100%;
-  padding: 12px 8px;
-  padding-bottom: 14px;
+  padding: 0px 0px;
 }
+
+.card-text p {
+  margin: 6px 0;
+  }
+  .fam-holder .parent {
+    margin: 0;
+    }
 /*# sourceMappingURL=dep.css.map */

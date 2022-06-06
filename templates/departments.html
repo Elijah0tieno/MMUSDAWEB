@@ -250,12 +250,13 @@
                   <!-- department card start-->
                 {% for department_item in departments %}
                 <div class="demo-card-square mdl-card mdl-shadow--4dp flexRow fam-card">
-                    <div class="mdl-card--expand left-side">
-                        <img src="../static/icons/Learning.svg" alt="icon" class="card-icon">
-                    </div>
+                    
                     <div class="right-side flexColumn">
+                        <div class="mdl-card--expand left-side">                        
+                            <!-- <img src="{% static 'icons/church-logo.svg' %}"  alt="icon" class="card-icon"> -->
+                            <h2 class="mdl-card__title-text card-title">{{ department_item.name }}</h2>
+                        </div>
                         <div class="mdl-card__supporting-text card-text">
-                         <h2 class="mdl-card__title-text card-title">{{ department_item.name }}</h2>
 
                          <p class="parent"><b>Leader: {{ department_item.head }}</b>
                          </p>
@@ -265,7 +266,7 @@
                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                             <span class="material-symbols-outlined phone-icon">
                                 phone_in_talk
-                                </span>
+                            </span>
                             Contact department
                           </a>
                         </div>

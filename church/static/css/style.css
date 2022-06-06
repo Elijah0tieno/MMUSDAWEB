@@ -22,10 +22,9 @@
           font-feature-settings: 'liga';
 }
 
-body {
-  background: #f7f7f7;
+.u-font--primary-nav {
+  font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
 }
-
 .no-margin {
   margin: 0;
 }
@@ -36,7 +35,11 @@ body {
   color: #052252;
   width: 100%;
 }
-
+/* .swiper-button-prev, .swiper-button-next{
+  background: #0057ff;
+  padding: 0 8px;
+  color: white;
+} */
 .mdl-button {
   text-transform: none;
   display: -webkit-box;
@@ -63,6 +66,19 @@ body {
   font-weight: 600;
 }
 
+.view-all-events-btn{
+  min-width: 170px;
+  align-self: center;
+}
+.swiper{
+  padding-right: 12rem;
+}
+.swiper-wrapper{
+  padding-bottom: 20px;
+}
+.swiper-pagination{
+  bottom: -4px;
+}
 .icon {
   width: 20px;
   height: 20px;
@@ -160,10 +176,13 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-
+.event-icon{
+  margin-right: 8px;
+}
 .event-card {
   margin: 10px;
   width: 280px;
+  min-height: 400px;
 }
 
 .event-card .poster-img {
@@ -228,9 +247,13 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+  .event-card{
+    min-height: unset;
+  }
   .card-picture {
     width: 100%;
     height: 230px;
+
   }
 }
 /*# sourceMappingURL=style.css.map */
