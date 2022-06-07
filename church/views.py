@@ -1,12 +1,19 @@
 from django.shortcuts import render
 from .models import Department, Family, Announcement, Member, Event
 from django.utils.translation import gettext_lazy as _
+from datetime import datetime
 
 # Create your views here.
 
 def home(request):
+    today = datetime.today()
+    
+    events = Event.objects.order_by('start_date').all()
+    latest_events =  Event.objects.filter(start_date__lte=today, end_date__gte=today).order_by('start_date').all()
+    
     context = {
-        'events': Event.objects.all()
+        'events': events,
+        'latest_events': latest_events,
     }
     return render(request, 'home.html', context)
 

@@ -16,7 +16,9 @@ class Department(models.Model):
 class Event(models.Model):
     event_name = models.CharField(max_length=250)
     poster = ImageField()
-    week = models.CharField(max_length=200)
+    # week = models.CharField(max_length=200)
+    start_date = models.DateField()
+    end_date = models.DateField()
     description = models.CharField(max_length=500)
     
     def __str__(self):
@@ -33,7 +35,7 @@ class Family(models.Model):
         return self.name
 
 class Announcement(models.Model):
-    item = models.CharField(max_length=1500)
+    item = models.TextField()
     date = models.DateField()
     
     def __str__(self):

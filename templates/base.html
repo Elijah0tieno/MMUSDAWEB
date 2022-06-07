@@ -121,7 +121,7 @@
     </div>
 
     <div class="l-grid-wrap--6-of-7 l-grid-item--s--6-col c-drawer__container u-spacing u-theme--ming u-theme--background-color--darker">
-        <div class="c-drawer__search">
+        {% comment %} <div class="c-drawer__search">
             <form action="home.html">
         
                 <fieldset>
@@ -132,7 +132,7 @@
                     </button>
                 </fieldset>
             </form>
-        </div>
+        </div> {% endcomment %}
 
         <div class="c-drawer__nav">
             <div class="c-drawer__nav-primary">
@@ -140,32 +140,42 @@
                 <ul class="c-primary-nav__list c-priority-nav__list">
                
 
-                <li class="c-primary-nav__list-item has-subnav">
-                <a href="/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
-                Departments
-                </a>
-                <span class="c-primary-nav__arrow c-subnav__arrow o-arrow--down u-path-fill--gray"></span>
-                <ul class="c-primary-nav__subnav c-subnav">
-                    <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark">
-                        <a class="c-primary-nav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--base" href="">Administration</a>
-                    </li>
-                    <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark">
-                        <a class="c-primary-nav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--base" href="">Ministries and Services</a>
-                    </li>
-                </ul>
-
+                <li class="c-primary-nav__list-item">
+                    <a href="/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
+                        Home
+                    </a>
                 </li>
-                <li class="c-primary-nav__list-item has-subnav">
+
+                <li class="c-primary-nav__list-item">
+                    <a href="/families" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
+                        Families
+                    </a>
+                </li>
+
+                <li class="c-primary-nav__list-item">
+                    <a href="/events" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
+                        Events
+                    </a>
+                </li>
+
+                <li class="c-primary-nav__list-item">
+                    <a href="/departments" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
+                        Departments
+                    </a>
+                </li>
+
+                
+                <li class="c-primary-nav__list-item">
                     <a href="/about/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
                     About
                     </a>
-                    <span class="c-primary-nav__arrow c-subnav__arrow o-arrow--down u-path-fill--gray"></span>
+                    {% comment %} <span class="c-primary-nav__arrow c-subnav__arrow o-arrow--down u-path-fill--gray"></span>
                     <ul class="c-primary-nav__subnav c-subnav">
                         <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark">
                             <a class="c-primary-nav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--base" href="/about/">About Us</a>
                         </li>
                        
-                    </ul>
+                    </ul> {% endcomment %}
     
                     </li>
                 </ul>
@@ -177,14 +187,14 @@
             <div class="c-drawer__nav-secondary">
                 <nav class="c-secondary-nav" role="navigation">
                     <ul class="c-secondary-nav__list">
-
+                        {% comment %} 
                        
                         <li class="c-secondary-nav__list-item">
                             <a href="" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
                                 <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__contact</title><path d="M0,0V8H6l4,2V0ZM8,6.76,6.47,6H2V2H8Z" fill="#777"/></svg>
                                 </span> Contact
                             </a>
-                        </li>
+                        </li> {% endcomment %}
                        
                        
                         <li class="c-secondary-nav__list-item c-secondary-nav__list-item__search c-secondary-nav__list-item__toggle js-toggle-menu js-toggle-search is-priority">
@@ -259,15 +269,12 @@
                             </div>
                         </div>
                         
+
+                        {% for event in latest_events %}
                         <div class="c-carousel__item u-position--relative ">
-                            <picture class="picture">
-                               
-                                <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 900px)">
-                                <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 700px)">
-                                <source srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" media="(min-width: 500px)">
-                               
-                                <img itemprop="image" srcset="https://i.ytimg.com/vi/73XLCo2UWPQ/maxresdefault.jpg" alt="Alt Text">
-                            </picture>
+                            {% thumbnail event.poster "480x360" crop="center" as im %}
+                            <img src="{{ im.url }}"  alt=""></img>
+                            {% endthumbnail %}
                             <div class="c-carousel__item-text__wrap l-grid l-grid--7-col u-shift--left--1-col--at-large">
                                 <div class="l-grid-item l-grid-item--m--4-col l-grid-item--xl--3-col">
                                     <div class="c-carousel__item-text carousel__item--right u-spacing u-padding--double--top u-padding--double--bottom">
@@ -277,6 +284,7 @@
                                 </div>
                             </div>
                         </div>
+                        {% endfor %}
 
                         
                     </div>
@@ -319,12 +327,13 @@
                     {{ event_item.event_name }}
                     </div>
                  </div>
+
                 <div class="mdl-card__supporting-text">
                     <p class="mdl-card__supporting-text event-date">
                         <span class="material-icons-outlined event-icon">
                             event
                             </span>
-                        {{ event_item.week}}
+                        {{ event_item.start_date}} to {{ event_item.end_date}}
                     </p>
                 {{ event_item.description | truncatechars:96 }}
                 </div>

@@ -10,7 +10,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Noto+Serif:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../static/css//base.css" media="all">
-    <script src="js/head-script.min.js" type="text/javascript"></script>
+    <script src="{% static 'js/head-script.min.js' %}" type="text/javascript"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 
@@ -253,11 +253,10 @@
                 <!-- beginning of one card  -->
                 <div class="mdl-card ann-card mdl-shadow--2dp">
                     <div class="mdl-card__title mdl-card--expand">
-                    <h2 class="mdl-card__title-text">{{ announcement_item.item }}</h2>
+                    <h2 class="mdl-card__title-text">{{ announcement_item.date }}</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenan convallis.
+                        {{ announcement_item.item }}
                     </div>
 
                     <div class="mdl-card__supporting-text date-posted">
@@ -369,7 +368,8 @@
     </div>
     
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="static/js/script.min.js" type="text/javascript"></script>
+    <script src="{% static 'js/script.min.js' %}" type="text/javascript"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="../static/js/events.js"></script>
 </body>
 </html>
