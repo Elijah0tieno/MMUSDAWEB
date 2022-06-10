@@ -23,7 +23,7 @@
 }
 
 .u-font--primary-nav {
-  font-family: "Noto Sans", "Helvetica", "Arial", sans-serif;
+  font-family: "Noto Sans", "Helvetica", "Arial", sans-serif! important;
 }
 .no-margin {
   margin: 0;

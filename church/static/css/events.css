@@ -1,5 +1,5 @@
 *, h1, h2 {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif! important;
   }
   
   .mdl-shadow--4dp {
@@ -385,7 +385,12 @@
     }
     .showMoreDetails .event-details, .showMoreDetails .eventPage-card .event-values, .eventPage-card .showMoreDetails .event-values {
       max-width: unset !important;
+      flex-direction: column;
     }
+    
+  .eventPage-card .more-details{
+    margin-top: 10px;
+  }
   }
   @media screen and (max-width: 330px) {
     .eventPage-card{
