@@ -86,22 +86,7 @@
                     </li>
 
                     
-                    <li class="c-primary-nav__list-item has-subnav">
-                        <a href="/about/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
-                        About
-                        </a>
-                        <span class="c-primary-nav__arrow c-subnav__arrow o-arrow--down u-path-fill--gray"></span>
-                        <ul class="c-primary-nav__subnav c-subnav">
-                            <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark">
-                                <a class="c-primary-nav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--base" href="https://www.adventist.org/beliefs/fundamental-beliefs/" target="_blank">Beliefs</a>
-                            </li>
-                            <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark">
-                                <a class="c-primary-nav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--base" href="/about/">About Us</a>
-                            </li>
-                           
-                        </ul>
-
-                    </li>
+               
                 </ul>
 
             </nav>
@@ -121,19 +106,7 @@
     </div>
 
     <div class="l-grid-wrap--6-of-7 l-grid-item--s--6-col c-drawer__container u-spacing u-theme--ming u-theme--background-color--darker">
-        {% comment %} <div class="c-drawer__search">
-            <form action="home.html">
         
-                <fieldset>
-                    <legend class="is-vishidden">Search</legend>
-                    <input type="search" name="search" placeholder="Search …" class="search-form__input u-font--secondary--s" value="" required autocomplete="on" />
-                    <button class="search-form__submit is-vishidden">
-                        <span class="is-vishidden">Submit</span>
-                    </button>
-                </fieldset>
-            </form>
-        </div> {% endcomment %}
-
         <div class="c-drawer__nav">
             <div class="c-drawer__nav-primary">
                 <nav class="c-primary-nav c-priority-nav" role="navigation">
@@ -164,20 +137,7 @@
                     </a>
                 </li>
 
-                
-                <li class="c-primary-nav__list-item">
-                    <a href="/about/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
-                    About
-                    </a>
-                    {% comment %} <span class="c-primary-nav__arrow c-subnav__arrow o-arrow--down u-path-fill--gray"></span>
-                    <ul class="c-primary-nav__subnav c-subnav">
-                        <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark">
-                            <a class="c-primary-nav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--base" href="/about/">About Us</a>
-                        </li>
-                       
-                    </ul> {% endcomment %}
     
-                    </li>
                 </ul>
 
                 </nav>
@@ -187,22 +147,9 @@
             <div class="c-drawer__nav-secondary">
                 <nav class="c-secondary-nav" role="navigation">
                     <ul class="c-secondary-nav__list">
-                        {% comment %} 
-                       
-                        <li class="c-secondary-nav__list-item">
-                            <a href="" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
-                                <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__contact</title><path d="M0,0V8H6l4,2V0ZM8,6.76,6.47,6H2V2H8Z" fill="#777"/></svg>
-                                </span> Contact
-                            </a>
-                        </li> {% endcomment %}
                        
                        
-                        <li class="c-secondary-nav__list-item c-secondary-nav__list-item__search c-secondary-nav__list-item__toggle js-toggle-menu js-toggle-search is-priority">
-                            <a href="#" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
-                                <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__search</title><path d="M9.91,8.5,7.43,6A4,4,0,1,0,4,8a4,4,0,0,0,2-.57L8.5,9.91ZM2,4A2,2,0,1,1,4,6,2,2,0,0,1,2,4Z" fill="#777"/></svg>
-                                </span>Search
-                            </a>
-                        </li>
+                        
                         <li class="c-secondary-nav__list-item c-secondary-nav__list-item__menu c-secondary-nav__list-item__toggle js-toggle-menu is-priority">
                             <a href="#" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
                                 <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__menu</title><path d="M0,0H10V2H0ZM0,10H10V8H0ZM0,6H10V4H0Z" fill="#9b9b9b"/></svg>
@@ -333,12 +280,12 @@
                         <span class="material-icons-outlined event-icon">
                             event
                             </span>
-                        {{ event_item.start_date}} to {{ event_item.end_date}}
+                        {{ event_item.start_date}} - {{ event_item.end_date}}
                     </p>
                 {{ event_item.description | truncatechars:96 }}
                 </div>
                 <div class="mdl-card__actions">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/events/">
                         <img src="{% static 'icons/More.svg' %}" alt="more" class="icon">
                          Learn More
                        </a>
@@ -347,7 +294,7 @@
         
               {% endfor %}
 
-              <a class="mdl-button view-all-events-btn mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <a class="mdl-button view-all-events-btn mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/events/">
                 View All Events
                 <span class="material-icons-outlined">
                     arrow_right_alt
@@ -369,7 +316,7 @@
             <h2 class="mdl-card__title-text card-title u-padding--double--bottom">Learn More About Us</h2>
 
                 <!-- department card -->
-                <div class="demo-card-square mdl-card mdl-shadow--4dp flexRow">
+                <div class="demo-card-square mdl-card mdl-shadow--4dp flexRow" href="/departments/">
                     <div class="mdl-card--expand left-side">
                         <picture class="card-picture">
                             <source srcset="https://iwillgo2020.org/wp-content/uploads/2020/07/Leadership-1.jpg" media="(min-width: 900px)">
@@ -386,7 +333,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Aenan convallis.
                            </p>
-                           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/departments/">
                            <img src="../static/icons/More.svg" alt="more" class="icon">
                             Learn More
                           </a>
@@ -395,7 +342,7 @@
                   </div>
 
                   <!-- families card -->
-                <div class="demo-card-square mdl-card mdl-shadow--4dp  rowReverse">
+                <div class="demo-card-square mdl-card mdl-shadow--4dp  rowReverse" href="/families/">
                     <div class="mdl-card--expand left-side">
                         <picture class="card-picture">
                             <source srcset="https://iwillgo2020.org/wp-content/uploads/2020/07/Leadership-1.jpg" media="(min-width: 900px)">
@@ -412,7 +359,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Aenan convallis.
                            </p>
-                           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/families/">
                            <img src="../static/icons/More.svg" alt="more" class="icon">
                             Learn More
                           </a>
@@ -429,7 +376,7 @@
 
 
         
-<footer class="c-footer u-theme--background-color--base" role="contentinfo">
+<footer id="footer" class="c-footer u-theme--background-color--base" role="contentinfo">
   <div class="c-footer--inner u-color--white l-grid l-grid--7-col l-grid-wrap l-grid-wrap--6-of-7">
      <div class="l-grid-item l-grid-item--m--3-col c-footer__description">
          <p>

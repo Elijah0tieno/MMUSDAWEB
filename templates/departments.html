@@ -37,17 +37,12 @@
                         <nav class="c-secondary-nav" role="navigation">
                             <ul class="c-secondary-nav__list">
                                 <li class="c-secondary-nav__list-item">
-                                    <a href="/contact/" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
+                                    <a href="#footer" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
                                         <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__contact</title><path d="M0,0V8H6l4,2V0ZM8,6.76,6.47,6H2V2H8Z" fill="#777"/></svg>
                                         </span> Contact
                                     </a>
                                 </li>
-                                <li class="c-secondary-nav__list-item c-secondary-nav__list-item__search c-secondary-nav__list-item__toggle js-toggle-menu js-toggle-search is-priority">
-                                    <a href="#" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
-                                        <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__search</title><path d="M9.91,8.5,7.43,6A4,4,0,1,0,4,8a4,4,0,0,0,2-.57L8.5,9.91ZM2,4A2,2,0,1,1,4,6,2,2,0,0,1,2,4Z" fill="#777"/></svg>
-                                        </span>Search
-                                    </a>
-                                </li>
+                                
                                 <li class="c-secondary-nav__list-item c-secondary-nav__list-item__menu c-secondary-nav__list-item__toggle js-toggle-menu is-priority">
                                     <a href="#" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
                                         <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__menu</title><path d="M0,0H10V2H0ZM0,10H10V8H0ZM0,6H10V4H0Z" fill="#9b9b9b"/></svg>
@@ -124,7 +119,7 @@
 
                 <div class="l-grid-wrap--6-of-7 l-grid-item--s--6-col c-drawer__container u-spacing u-theme--ming u-theme--background-color--darker">
                     <div class="c-drawer__search">
-                        <form action="home.html">
+                        {% comment %} <form action="home.html">
                         <!-- <form action="/search" role="search" method="get" class="search-form toggled-element"> -->
                             <fieldset>
                                 <legend class="is-vishidden">Search</legend>
@@ -133,7 +128,7 @@
                                     <span class="is-vishidden">Submit</span>
                                 </button>
                             </fieldset>
-                        </form>
+                        </form> {% endcomment %}
                     </div>
 
                     <div class="c-drawer__nav">
@@ -142,30 +137,30 @@
                             <ul class="c-primary-nav__list c-priority-nav__list">
                         
 
-                            <li class="c-primary-nav__list-item has-subnav">
-                            <a href="/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
-                            Departments
-                            </a>
-                            <span class="c-primary-nav__arrow c-subnav__arrow o-arrow--down u-path-fill--gray"></span>
-                            <ul class="c-primary-nav__subnav c-subnav">
-                                <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark">
-                                    <a class="c-primary-nav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--base" href="">Administration</a>
+                                <li class="c-primary-nav__list-item">
+                                    <a href="/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
+                                        Home
+                                    </a>
                                 </li>
-                                <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark">
-                                    <a class="c-primary-nav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--base" href="">Ministries and Services</a>
+                
+                                <li class="c-primary-nav__list-item">
+                                    <a href="/families" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
+                                        Families
+                                    </a>
                                 </li>
-                            </ul>
-
-                            </li>
-                            <li class="c-primary-nav__list-item has-subnav">
-                                <a href="/about/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
-                                About
-                                </a>
-                                <span class="c-primary-nav__arrow c-subnav__arrow o-arrow--down u-path-fill--gray"></span>
-                                <ul class="c-primary-nav__subnav c-subnav">
-                                    <li class="c-primary-nav__subnav__list-item c-subnav__list-item u-background-color--gray--light u-theme--border-color--dark">
-                                        <a class="c-primary-nav__subnav__link c-subnav__link u-color--gray--dark u-theme--link-hover--base" href="/about/">About Us</a>
-                                    </li>
+                
+                                <li class="c-primary-nav__list-item">
+                                    <a href="/events" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
+                                        Events
+                                    </a>
+                                </li>
+                
+                                <li class="c-primary-nav__list-item">
+                                    <a href="/departments" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
+                                        Departments
+                                    </a>
+                                </li>
+                
                                 
                                 </ul>
                 
@@ -182,19 +177,14 @@
 
                                 
                                     <li class="c-secondary-nav__list-item">
-                                        <a href="" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
+                                        <a href="footer" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
                                             <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__contact</title><path d="M0,0V8H6l4,2V0ZM8,6.76,6.47,6H2V2H8Z" fill="#777"/></svg>
                                             </span> Contact
                                         </a>
                                     </li>
                                 
                                 
-                                    <li class="c-secondary-nav__list-item c-secondary-nav__list-item__search c-secondary-nav__list-item__toggle js-toggle-menu js-toggle-search is-priority">
-                                        <a href="#" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
-                                            <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__search</title><path d="M9.91,8.5,7.43,6A4,4,0,1,0,4,8a4,4,0,0,0,2-.57L8.5,9.91ZM2,4A2,2,0,1,1,4,6,2,2,0,0,1,2,4Z" fill="#777"/></svg>
-                                            </span>Search
-                                        </a>
-                                    </li>
+                                    
                                     <li class="c-secondary-nav__list-item c-secondary-nav__list-item__menu c-secondary-nav__list-item__toggle js-toggle-menu is-priority">
                                         <a href="#" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
                                             <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__menu</title><path d="M0,0H10V2H0ZM0,10H10V8H0ZM0,6H10V4H0Z" fill="#9b9b9b"/></svg>

@@ -28,7 +28,9 @@
 .no-margin {
   margin: 0;
 }
-
+*{
+  scroll-behavior: smooth;
+}
 .card-title {
   font-size: 22px;
   font-weight: 600;
