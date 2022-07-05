@@ -37,6 +37,7 @@ class Family(models.Model):
 class Announcement(models.Model):
     item = models.TextField()
     date = models.DateField()
+
     
     def __str__(self):
         return self.item
