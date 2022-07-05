@@ -236,7 +236,7 @@
                     <div class="mdl-card__title mdl-card--expand">
                     <h2 class="mdl-card__title-text">{{ announcement_item.date }}</h2>
                     </div>
-                    <div class="mdl-card__supporting-text">
+                    <div class="mdl-card__supporting-text anno-text">
                         {{ announcement_item.item }}
                     </div>
 
@@ -352,5 +352,38 @@
     <script src="{% static 'js/script.min.js' %}" type="text/javascript"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="../static/js/events.js"></script>
+    <script>
+        function addStr(str, index, stringToAdd){
+  return str.substring(0, index) + stringToAdd + str.substring(index, str.length);
+}
+
+        let allAnno = document.querySelectorAll(".anno-text");
+        let numbers = ['2', '3', '4', '5', '6','7', '8', '9', '10']
+       
+        allAnno.forEach(anno => {
+        annoValue = anno.innerHTML;
+        newValue = annoValue;
+        nv = newValue;
+
+        for (var i = 0; i < annoValue.length; i++) {
+
+            // var a = "I want apple";
+var b = "<br>";
+// var position = 6;
+// var output = [a.slice(0, position), b, a.slice(position)].join('');
+// console.log(output);
+
+        let annoChar = annoValue.charAt(i);
+        // console.log(annoChar);
+        if (numbers.includes(annoChar)){
+            // addStr(newValue, 2, "ji")
+            newValue = newValue.substring(4,i) + b + newValue.substring(i);
+            console.log("add new line")
+        }
+        }
+        console.log(newValue)
+        anno.innerHTML = newValue;
+    });
+    </script>
 </body>
 </html>
