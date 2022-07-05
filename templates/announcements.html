@@ -375,7 +375,7 @@ var b = "<br>";
 
         let annoChar = annoValue.charAt(i);
         // console.log(annoChar);
-        if (numbers.includes(annoChar)){
+        if (numbers.includes(annoChar) && annoValue.charAt(i+1) === "." ){
             // addStr(newValue, 2, "ji")
             newValue = newValue.substring(4,i) + b + newValue.substring(i);
             console.log("add new line")
