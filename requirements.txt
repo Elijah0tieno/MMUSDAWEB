@@ -8,4 +8,4 @@ Django== 4.0.0
 itsdangerous==2.1.2
 MarkupSafe==2.1.1
 Werkzeug==2.1.2
-sorl-thumbnail==12.8.1
+sorl-thumbnail==11.9.1
