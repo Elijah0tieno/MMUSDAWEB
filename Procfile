@@ -1,1 +1,1 @@
-web: gunicorn mmusda.wsgi --log-file -
+web: gunicorn mmusdaweb.wsgi --log-file -

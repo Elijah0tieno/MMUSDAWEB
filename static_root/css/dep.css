@@ -1,0 +1,58 @@
+.fam-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.fam-holder .fam-card {
+  width: 300px;
+  margin: 20px 10px;
+  padding: 0 0 12px 12px;
+  min-height: 150px;
+}
+
+.fam-holder .fam-card .card-title {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  align-self: end;
+}
+
+.left-side {
+  padding-left: 0;
+}
+
+.card-icon {
+  width: 60px;
+  display: none;
+}
+
+.right-side {
+  max-width: 303px;
+  /* padding-left: 0; */
+  width: 100%;
+}
+
+.fam-holder .mdl-card__supporting-text {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  padding: 0px 0px;
+}
+
+.card-text p {
+  margin: 6px 0;
+  }
+  .fam-holder .parent {
+    margin: 0;
+    }
+/*# sourceMappingURL=dep.css.map */
