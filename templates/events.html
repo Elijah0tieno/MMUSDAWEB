@@ -4,14 +4,14 @@
 <!DOCTYPE html>
 <html class="u-theme--ming svg picture csspositionsticky srcset inlinesvg no-touchevents cssanimations backgroundcliptext flexbox flexboxlegacy no-flexboxtweener flexwrap scrollsnappoints backgroundblendmode objectfit object-fit js no-touch js-priorityNav" lang="&quot;en-US&quot;">
 <head>
-    
+
     <meta charset="UTF-8">
-    <meta name='viewport' content="width=device-width, initial-scale=1.0"> 
+    <meta name='viewport' content="width=device-width, initial-scale=1.0">
 
     <title>MMU</title>
-    
+
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Noto+Serif:400,400i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../static/css//base.css" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static  'css/base.css' %}" media="all">
     <script src="{% static 'js/head-script.min.js' %}" type="text/javascript"></script>
 
     <!-- Material design links  -->
@@ -78,28 +78,28 @@
                         </a>
                     </li>
 
-                    
+
                     <li class="c-primary-nav__list-item has-subnav">
                         <a href="/families/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
                         Families
                         </a>
                     </li>
 
-                    
+
                     <li class="c-primary-nav__list-item has-subnav">
                         <a href="/announcements/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
                         Announcements
                         </a>
                     </li>
 
-                    
+
                     <li class="c-primary-nav__list-item has-subnav">
                         <a href="/events/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
                         Events
                         </a>
                     </li>
 
-                    
+
                     <li class="c-primary-nav__list-item has-subnav">
                         <a href="/departments/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
                         Departments
@@ -139,35 +139,35 @@
             <div class="c-drawer__nav-primary">
                 <nav class="c-primary-nav c-priority-nav" role="navigation">
                 <ul class="c-primary-nav__list c-priority-nav__list">
-               
+
 
                     <li class="c-primary-nav__list-item">
                         <a href="/" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
                             Home
                         </a>
                     </li>
-    
+
                     <li class="c-primary-nav__list-item">
                         <a href="/families" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
                             Families
                         </a>
                     </li>
-    
+
                     <li class="c-primary-nav__list-item">
                         <a href="/events" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
                             Events
                         </a>
                     </li>
-    
+
                     <li class="c-primary-nav__list-item">
                         <a href="/departments" class="c-primary-nav__link u-font--primary-nav u-color--gray--dark u-theme--link-hover--base u-theme--border-color--base">
                             Departments
                         </a>
                     </li>
-    
-                       
+
+
                     </ul>
-    
+
                     </li>
                 </ul>
 
@@ -179,15 +179,15 @@
                 <nav class="c-secondary-nav" role="navigation">
                     <ul class="c-secondary-nav__list">
 
-                       
+
                         <li class="c-secondary-nav__list-item">
                             <a href="#footer" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
                                 <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__contact</title><path d="M0,0V8H6l4,2V0ZM8,6.76,6.47,6H2V2H8Z" fill="#777"/></svg>
                                 </span> Contact
                             </a>
                         </li>
-                       
-                       
+
+
                         <li class="c-secondary-nav__list-item c-secondary-nav__list-item__menu c-secondary-nav__list-item__toggle js-toggle-menu is-priority">
                             <a href="#" class="c-secondary-nav__link u-font--secondary-nav u-color--gray u-theme--link-hover--base">
                                 <span class="u-icon u-icon--xs u-path-fill--gray"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><title>o-icon__menu</title><path d="M0,0H10V2H0ZM0,10H10V8H0ZM0,6H10V4H0Z" fill="#9b9b9b"/></svg>
@@ -209,7 +209,7 @@
 
         <div class="c-drawer__about">
             <div class="c-drawer__about-left u-spacing">
-                
+
                 <p>Seventh-day Adventists are devoted to helping people understand the Bible to find freedom, healing and hope.</p>
             </div>
             <div class="c-drawer__about-right u-spacing--half">
@@ -227,18 +227,18 @@
 
 </div>
 
-            
+
     <main class="l-main u-spacing--double u-padding--double--bottom" role="main">
 
-        
+
         <section class="page-sections event-section u-padding">
             <h2 class="mdl-card__title-text card-title u-padding--double--bottom">MMUSDA Calendar of Events</h2>
-            
+
         <div class="events-holder">
             <!-- beginning of one card  -->
             {% for event_item in events %}
             <div class="eventPage-card">
-                
+
                 <div class="event-box mdl-card mdl-shadow--4dp ">
                     {% thumbnail event_item.poster "480x360" crop="center" as im %}
                         <img src="{{ im.url }}"  alt="" class="eventCard-img"></img>
@@ -267,18 +267,18 @@
             </div>
             <!-- ending of card  -->
             {% endfor %}
-           
+
         </div>
         </section>
 
 
-        
-        
+
+
 </main>
 
 
 
-        
+
 <footer id="footer" class="c-footer u-theme--background-color--base" role="contentinfo">
   <div class="c-footer--inner u-color--white l-grid l-grid--7-col l-grid-wrap l-grid-wrap--6-of-7">
      <div class="l-grid-item l-grid-item--m--3-col c-footer__description">
@@ -345,7 +345,7 @@
 </footer>
 <!-- /.c-footer -->
         </div>
-        
+
 <aside class="l-wrap__sabbath l-sabbath  js-sticky-parent js-toggle-menu">
       <div class="l-sabbath__logo js-sticky">
       <div class="l-sabbath__logo--inner ">
@@ -363,7 +363,7 @@
 
 
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="{% static 'js/script.min.js' %}" type="text/javascript"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
