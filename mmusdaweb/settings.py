@@ -74,17 +74,27 @@ WSGI_APPLICATION = 'mmusdaweb.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'mmusda',
+#         'USER': 'postgres',
+#         'PASSWORD': '1/1/1999',
+#         'HOST': 'localhost',
+#         'PORT': '5432',     
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mmusda',
-        'USER': 'postgres',
-        'PASSWORD': '1/1/1999',
-        'HOST': 'localhost',
+        'NAME': 'd8inin4tva6qtu',
+        'USER': 'jbhsaafsfowvpo',
+        'PASSWORD': '554338963f453b2c7a67f921b175c5c83e9ad187962500b4fcf64ecabaa90623',
+        'HOST': 'ec2-44-205-63-142.compute-1.amazonaws.com',
         'PORT': '5432',     
     }
 }
-
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
