@@ -8,3 +8,4 @@ Werkzeug==2.1.2
 sorl-thumbnail==12.8.0
 Pillow==9.2.0
 whitenoise==6.2.0
+dj-database-url==2.1.1
