@@ -9,4 +9,4 @@ sorl-thumbnail==12.8.0
 Pillow==9.2.0
 whitenoise==6.2.0
 dj-database-url==1.0.0
-postgresql_psycopg2==1.0.0
+postgresql_psycopg2==2.8.2
