@@ -15,7 +15,6 @@ def home(request):
         'events': events,
         'latest_events': latest_events,
     }
-    print(events[3].poster)
     return render(request, 'home.html', context)
     
 
