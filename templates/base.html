@@ -270,9 +270,11 @@
             <div class="swiper-slide mdl-card event-card mdl-shadow--4dp">
                 <div class="mdl-card__media">
                     {% comment %} <img src="{% static 'images/family-week-poster.jpeg' %}" alt="event poster" class="poster-img"> {% endcomment %}
-                    {% thumbnail event_item.poster "480x360" crop="center" as im %}
-                    <img src="/media/{{im}}"></img>
-                    {% endthumbnail %}
+                    {% comment %} {% thumbnail event_item.poster "480x360" crop="center" as im %} {% endcomment %}
+                    <img src="/media/{{event_item.poster}}"></img>
+                    {% comment %} <h1>/media/{{event_item.poster}}</h1> {% endcomment %}
+                    {% comment %} {% endthumbnail %} {% endcomment %}
+                    {% comment %} <h1>/media/{{event_item.poster}}</h1> {% endcomment %}
                     
                 </div>
                 
