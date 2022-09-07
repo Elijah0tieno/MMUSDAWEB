@@ -65,6 +65,7 @@ h1, h2 {
   }
   
   .card-title {
+    max-width: 100%;
     text-align: center;
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -398,7 +399,7 @@ h1, h2 {
     margin-top: 10px;
   }
   }
-  @media screen and (max-width: 330px) {
+  @media screen and (max-width: 380px) {
     .eventPage-card{
       max-width: 100%;
     }
