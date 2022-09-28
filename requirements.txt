@@ -10,3 +10,6 @@ Pillow==9.2.0
 whitenoise==6.2.0
 dj-database-url==1.0.0
 psycopg2==2.9.1
+boto3==1.17.58
+django-storages==1.11.1
+

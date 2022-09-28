@@ -1,7 +1,13 @@
 from django.db import models
 from django.core.files.storage import FileSystemStorage
 from sorl.thumbnail import ImageField
+from mmusdaweb.storages import PublicMediaStorage, PrivateMediaStorage
 # fs = FileSystemStorage(location='/media/photos')
+
+def user_directory_path(instance, filename):
+    return 'posts/{0}/{1}'.format(instance.id, filename)
+
+# media/posts/user_id/filename
 
 # Create your models here.
 class Department(models.Model):
@@ -15,7 +21,7 @@ class Department(models.Model):
 
 class Event(models.Model):
     event_name = models.CharField(max_length=250)
-    poster = ImageField()
+    poster = ImageField(upload_to='images/')
     # week = models.CharField(max_length=200)
     start_date = models.DateField()
     end_date = models.DateField()
