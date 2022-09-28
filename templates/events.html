@@ -1,5 +1,5 @@
 {% load static %}
-{% load thumbnail %}
+{% comment %} {% load thumbnail %} {% endcomment %}
 
 <!DOCTYPE html>
 <html class="u-theme--ming svg picture csspositionsticky srcset inlinesvg no-touchevents cssanimations backgroundcliptext flexbox flexboxlegacy no-flexboxtweener flexwrap scrollsnappoints backgroundblendmode objectfit object-fit js no-touch js-priorityNav" lang="&quot;en-US&quot;">
@@ -246,9 +246,9 @@
             <div class="eventPage-card">
 
                 <div class="event-box mdl-card mdl-shadow--4dp ">
-                    {% thumbnail event_item.poster "480x360" crop="center" as im %}
-                        <img src="{{ im.url }}"  alt="" class="eventCard-img"></img>
-                    {% endthumbnail %}
+                    {% comment %} {% thumbnail event_item.poster "480x360" crop="center" as im %} {% endcomment %}
+                        <img src="{{event_item.poster.url}}"  alt="" class="eventCard-img"></img>
+                    {% comment %} {% endthumbnail %} {% endcomment %}
                     <div class="event-details">
                     <div class="event-values">
                         <h5 class="event-title">

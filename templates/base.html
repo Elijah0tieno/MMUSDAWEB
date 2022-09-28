@@ -225,8 +225,9 @@
 
                         {% for event in latest_events %}
                         <div class="c-carousel__item u-position--relative ">
-                            {% thumbnail event.poster "480x360" crop="center" as im %}
-                            <img src= "/media/{{im}}" alt="" class="poster-img"></img>
+                            {% thumbnail event_item.poster "480x360" crop="center" as im %}
+                            {% comment %} <img src= "/media/{{im}}" alt=""></img> {% endcomment %}
+                            <img src= "{{im.url}}" alt=""></img>
                             {% endthumbnail %}
                             <div class="c-carousel__item-text__wrap l-grid l-grid--7-col u-shift--left--1-col--at-large">
                                 <div class="l-grid-item l-grid-item--m--4-col l-grid-item--xl--3-col">
@@ -272,7 +273,9 @@
                 <div class="mdl-card__media">
                     {% comment %} <img src="{% static 'images/family-week-poster.jpeg' %}" alt="event poster" class="poster-img"> {% endcomment %}
                     {% comment %} {% thumbnail event_item.poster "480x360" crop="center" as im %} {% endcomment %}
-                    <img src="/media/{{event_item.poster}}"></img>
+                    <img src="{{event_item.poster.url}}" class="poster-img"></img>
+                    {% comment %} <img src="{{ event.poster.url }}" class="poster-img"></img> {% endcomment %}
+
                     {% comment %} <h1>/media/{{event_item.poster}}</h1> {% endcomment %}
                     {% comment %} {% endthumbnail %} {% endcomment %}
                     {% comment %} <h1>/media/{{event_item.poster}}</h1> {% endcomment %}

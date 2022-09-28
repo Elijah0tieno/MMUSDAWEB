@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'church',
     'sorl.thumbnail',
-    'whitenoise.runserver_nostatic'
+    'whitenoise.runserver_nostatic',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -130,13 +131,8 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
-
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
@@ -147,6 +143,17 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/')
 ]
 
+AWS_ACCESS_KEY_ID = 'AKIAWHRPPTJEACWLTCPS'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'mmusdaweb'
+
+AWS_S3_FILE_OVEWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# AWS_S3_REGION_NAME = 'Asia Pacific (Tokyo) ap-northeast-1'
+AWS_S3_ADDRESSING_STYLE = 'virtual'
+
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
@@ -156,3 +163,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
+
