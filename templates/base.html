@@ -225,9 +225,9 @@
 
                         {% for event in latest_events %}
                         <div class="c-carousel__item u-position--relative ">
-                            {% thumbnail event.poster "480x360" crop="center" as im %}
+                            {% thumbnail event_item.poster "480x360" crop="center" as im %}
                             {% comment %} <img src= "/media/{{im}}" alt=""></img> {% endcomment %}
-                            <img src= "{{event_item.poster.url}}" alt=""></img>
+                            <img src= "{{im.url}}" alt=""></img>
                             {% endthumbnail %}
                             <div class="c-carousel__item-text__wrap l-grid l-grid--7-col u-shift--left--1-col--at-large">
                                 <div class="l-grid-item l-grid-item--m--4-col l-grid-item--xl--3-col">
