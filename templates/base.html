@@ -5,6 +5,8 @@
 <head>
     
     <meta charset="UTF-8">
+  <meta name="theme-color" content="#007f98">
+
     <meta name='viewport' content="width=device-width, initial-scale=1.0"> 
 {% block title %} <title>MMU</title> {% endblock %}
     
@@ -22,6 +24,7 @@
     <!-- favico -->
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
     <link href="https://frymn-church.S3.amazonaws.com/media/adventist-symbol--white.png"  rel="icon">
+
 {% endblock %}
 
 </head>
@@ -306,16 +309,17 @@
               </div>
         
               {% endfor %}
-
-              <a class="mdl-button view-all-events-btn mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/events/">
+              <div class="swiper-slide">
+              <a class="mdl-button view-all-events-btn mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/events/" style="    margin: auto;">
                 View All Events
                 <span class="material-icons-outlined">
                     arrow_right_alt
                     </span>
               </a>
+            </div>
 
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination" style="bottom: -4px;"></div>
 
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
