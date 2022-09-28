@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     'church',
     'sorl.thumbnail',
     'whitenoise.runserver_nostatic',
-    'upload',
     'storages',
 ]
 
