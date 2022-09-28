@@ -247,7 +247,7 @@
 
                 <div class="event-box mdl-card mdl-shadow--4dp ">
                     {% comment %} {% thumbnail event_item.poster "480x360" crop="center" as im %} {% endcomment %}
-                        <img src="{{event_item.poster}}"  alt="" class="eventCard-img"></img>
+                        <img src="{{event_item.poster.url}}"  alt="" class="eventCard-img"></img>
                     {% comment %} {% endthumbnail %} {% endcomment %}
                     <div class="event-details">
                     <div class="event-values">
