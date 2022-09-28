@@ -12,4 +12,4 @@ dj-database-url==1.0.0
 psycopg2==2.9.1
 boto3==1.17.58
 django-storages==1.11.1
-
+upload==1.0.1
